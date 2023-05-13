@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+
+}
+
+body {
+  
+  background:  #da3bc2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height:  100vh;
+  width: 100vw;
+  
+}
+
+
+
+.title{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 40px;
+  font-weight: 600;
+  color: #460ed3;
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  letter-spacing: 2px;
+  margin: 30px 0;
+
+}
+
+.todo-list{
+   width: 450px;
+   padding: 20px;
+   font-family: 'Fira Sans', sans-serif;
+   box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+   border-radius: 10px;
+   background-color: #fff;
+}
+
+
+.list-head{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 20px;
+}
+
+.entered-list{
+  padding: 10px;
+  border-radius: 5px;
+  caret-color: #D2001A;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.add-list{
+  border: none;
+  border-radius: 5px;
+  background-color: #8758FF;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  opacity: .6;
+  pointer-events: none;
+  font-family: 'PT Serif', serif;
+
+}
+
+
+.add-list.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tasks{
+  width: 100%;
+  margin-top: 30px;
+}
+.item{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'PT Serif', serif;
+}
+
+.item p{
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  border: #000000;
+  letter-spacing: 1px;
+
+}
+.item.completed p{
+  text-decoration: line-through;
+  color: #3D3C42;
+  
+}
+.item-button{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.item-button i{
+  
+  font-size: 18px;
+  cursor: pointer;
+  
+} 
+.item-button i::before{
+  border-radius: 10px;
+ 
+}
+
+.item-button i:nth-child(1)::before{
+  background: #82fa4b;
+  
+}
+.item-button i:nth-child(2)::before{
+  
+  background: #f52222;
+}
+
+.item-button i:hover{
+  transform: scale(1.4);
+  transition: .3s;
+}
+
+
